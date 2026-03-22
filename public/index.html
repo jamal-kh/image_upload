@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>PixelSwap | Side-by-Side</title>
+</head>
+
+<body>
+
+    <div class="main-container">
+        <div class="panel upload-panel">
+            <h1>PixelSwap</h1>
+            <p style="color: #94a3b8; font-size: 0.9rem;">Upload a file to trigger the shuffle.</p>
+
+            <form id="upload-form">
+                <div class="file-drop-area">
+                    <div id="image_area" style="width: 100%; height: auto;">
+                        <div style="font-size: 2rem;">📤</div>
+                        <p style="margin: 10px 0 5px;">Drag & Drop Image</p>
+                        <span id="file-name">or click to browse</span>
+                    </div>
+
+                    <input type="file" name="image" id="file-input" accept="image/*" required>
+                </div>
+
+                <button type="submit" class="btn">Shuffle & View</button>
+            </form>
+        </div>
+
+        <div class="panel result-panel">
+            <!-- Static HTML version (no EJS) -->
+            <h3 style="margin-top:0; font-size: 0.9rem; color: #94a3b8; text-transform: uppercase;">
+                Server Response
+            </h3>
+
+            <!-- Replace this manually or via JS after upload -->
+            <div class="placeholder-text" id="result-placeholder">
+                <div style="font-size: 3rem; margin-bottom: 1rem;">🖼️</div>
+                <p>Your processed image will appear here after upload.</p>
+            </div>
+
+            <!-- Hidden image container (for JS usage later if needed) -->
+            <img id="result-image" class="result-img" alt="Result image" style="display:none;">
+        </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+
+</body>
+
+</html>
