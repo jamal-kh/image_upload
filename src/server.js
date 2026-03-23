@@ -75,22 +75,6 @@ server.post("/upload", upload, async (req, res) => {
 
 
 
-// server.get("/api/image/:id", async (req, res) => {
-//     const { id } = req.params;
-
-//     try {
-//         const imagekey = await imageModel.findById(id).select("key");
-
-//         const imageURl = await getPreSignedURL(imagekey["key"]);
-
-//         res.json({
-//             url: imageURl,
-//         })
-//     } catch (err){
-//         console.error("error in get image route: "+ err);
-//     }
-// })
-
 server.listen(port, () => {
     console.log(`The server is running on http://localhost:${port}`)
 })
